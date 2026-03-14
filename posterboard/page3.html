@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Sensor Fusion Pipeline · Music in Motion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Music in Motion</h1>
+    <p class="tagline">A Real-Time Motion-Responsive Sound System to Enhance Physical Engagement</p>
+    <p class="subtitle">An Engineering Design Project by Ciana Tzuo · Horace Mann</p>
+    <nav class="page-nav">
+      <a href="index.html#big-question">Big Question</a>
+      <a href="page1.html">Design Constraints</a>
+      <a href="page2.html">Design Patterns</a>
+      <a href="page3.html">Sensor Fusion Pipeline</a>
+      <a href="page4.html">HW / SW Components</a>
+      <a href="page5.html">Key Learnings</a>
+      <a href="page6.html">References</a>
+      <span class="nav-sep">|</span>
+      <a href="docs.html">Docs</a>
+    </nav>
+  </header>
+  <main>
+    <section class="poster-image">
+      <img src="images/sensor-pipeline.png" alt="Poster — Sensor Fusion Pipeline" />
+    </section>
+    <section class="page-section">
+      <h2><span class="section-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/><circle cx="12" cy="12" r="10"/></svg></span> Sensor Fusion Pipeline</h2>
+      <div class="pipeline-diagram">
+        <div class="pipeline-row">
+          <div class="pipeline-node">Human</div>
+        </div>
+        <div class="pipeline-row">
+          <div class="pipeline-node">IMU sensors<br><small>Acceleration, Shake energy, Jerk, Activity Global</small></div>
+          <div class="pipeline-node">Pose Estimation<br><small>Hand height, Arm extension, Hands spread</small></div>
+        </div>
+        <div class="pipeline-row">
+          <div class="pipeline-node wide">Single Fused Sensor Pipeline</div>
+        </div>
+        <div class="pipeline-row">
+          <div class="pipeline-node wide">Real Time Audio Transformation</div>
+        </div>
+      </div>
+      <p class="page-note"><small>— 4 of 7 —</small></p>
+    </section>
+  </main>
+</body>
+</html>

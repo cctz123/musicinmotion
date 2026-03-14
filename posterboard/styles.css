@@ -1,0 +1,234 @@
+/* Poster Board — Music in Motion */
+:root {
+  --bg: #fafafa;
+  --text: #1a1a1a;
+  --accent: #2563eb;
+  --border: #e5e7eb;
+  --card-bg: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+
+.site-header {
+  background: var(--card-bg);
+  border-bottom: 2px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header .tagline {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 0.5rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.4;
+}
+
+.subtitle {
+  margin: 0 0 1rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  justify-content: center;
+}
+
+.page-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.page-nav a:hover {
+  text-decoration: underline;
+}
+
+.nav-sep {
+  color: var(--border);
+  margin: 0 0.25rem;
+}
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.poster-image {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.poster-image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.page-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.page-section h2 {
+  font-size: 1.35rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.section-icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.page-section h3 {
+  font-size: 1.1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.page-section ul {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.pattern-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.pattern-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0;
+}
+
+.pattern-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.pattern-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.page-section p {
+  margin: 0.5rem 0;
+}
+
+.page-note {
+  margin-top: 1.5rem;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.pipeline-diagram {
+  margin: 1rem 0;
+}
+
+.pipeline-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.pipeline-node {
+  background: #f1f5f9;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  min-width: 10rem;
+}
+
+.pipeline-node.wide {
+  min-width: 18rem;
+}
+
+.pipeline-node small {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  .site-header, main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .page-section {
+    padding: 1rem;
+  }
+}

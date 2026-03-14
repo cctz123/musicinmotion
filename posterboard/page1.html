@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Design Constraints · Music in Motion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Music in Motion</h1>
+    <p class="tagline">A Real-Time Motion-Responsive Sound System to Enhance Physical Engagement</p>
+    <p class="subtitle">An Engineering Design Project by Ciana Tzuo · Horace Mann</p>
+    <nav class="page-nav">
+      <a href="index.html#big-question">Big Question</a>
+      <a href="page1.html">Design Constraints</a>
+      <a href="page2.html">Design Patterns</a>
+      <a href="page3.html">Sensor Fusion Pipeline</a>
+      <a href="page4.html">HW / SW Components</a>
+      <a href="page5.html">Key Learnings</a>
+      <a href="page6.html">References</a>
+      <span class="nav-sep">|</span>
+      <a href="docs.html">Docs</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-section">
+      <h2><span class="section-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.27 6.96 9 5.04"/><path d="m20.73 6.96-9 5.04"/><path d="M12 12v9"/><path d="M12 12 3.27 6.96"/><path d="M12 12l9-5.04"/></svg></span> Design Constraints</h2>
+      <h3>Experiential Constraints</h3>
+      <ul>
+        <li>Support full-body interaction</li>
+        <li>Continuous auditory feedback</li>
+        <li>Respond proportionally to both subtle and large-scale movements</li>
+        <li>Enable fluid engagement across a wide range of motion dynamics, from slow, controlled gestures to fast, energetic actions</li>
+        <li>Low latency</li>
+        <li>Smooth parameter transitions, consistent system behavior; even minor delays or unstable audio artifacts can disrupt immersion and weaken this coupling</li>
+      </ul>
+      <h3>Technical Constraints</h3>
+      <ul>
+        <li>No need for specialized calibration or external infrastructure</li>
+        <li>End-to-end system latency &lt; 70 ms</li>
+        <li>Spatial jitter in estimated body position &lt; 3 cm to prevent audible instability</li>
+        <li>Motion tracking accuracy &gt; 85% under nominal conditions</li>
+        <li>Audio pipeline: no buffer underruns, audible glitches, or drift-related degradation</li>
+        <li>Sustain stable operation for at least 15 minutes of uninterrupted use</li>
+      </ul>
+      <h3>Cost / Resource Constraints</h3>
+      <ul>
+        <li>Operate reliably in ordinary indoor environments (typical household lighting and spatial constraints)</li>
+        <li>Affordable, consumer-grade hardware</li>
+        <li>Widely available open source software</li>
+      </ul>
+      <p class="page-note"><small>— 2 of 7 —</small></p>
+    </section>
+  </main>
+</body>
+</html>

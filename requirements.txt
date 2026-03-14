@@ -1,0 +1,10 @@
+mediapipe
+opencv-python
+numpy
+PyQt5
+librosa
+sounddevice
+scipy
+pyserial>=3.5
+matplotlib>=3.5.0
+witmotion

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Docs · Music in Motion</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .docs-layout { display: flex; gap: 1.5rem; max-width: 72rem; margin: 0 auto; padding: 0 2rem 2rem; align-items: flex-start; }
+    .docs-nav { flex-shrink: 0; width: 12rem; position: sticky; top: 1rem; }
+    .docs-nav ul { list-style: none; padding: 0; margin: 0; }
+    .docs-nav a { display: block; padding: 0.4rem 0.5rem; color: var(--accent); text-decoration: none; border-radius: 4px; font-size: 0.95rem; }
+    .docs-nav a:hover { background: #f1f5f9; }
+    .docs-nav a.active { font-weight: 600; background: #e0e7ff; color: #3730a3; }
+    .docs-content { flex: 1; min-width: 0; background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem 2rem; }
+    .docs-content h1 { margin-top: 0; font-size: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .docs-content h2 { font-size: 1.25rem; margin: 1.25rem 0 0.5rem; }
+    .docs-content h3 { font-size: 1.1rem; margin: 1rem 0 0.4rem; }
+    .docs-content pre { background: #f1f5f9; padding: 1rem; border-radius: 6px; overflow-x: auto; font-size: 0.9rem; }
+    .docs-content code { font-family: ui-monospace, monospace; font-size: 0.9em; }
+    .docs-content pre code { background: none; padding: 0; }
+    .docs-content p code { background: #f1f5f9; padding: 0.15em 0.4em; border-radius: 4px; }
+    .docs-content ul, .docs-content ol { margin: 0.5rem 0; padding-left: 1.5rem; }
+    .docs-content table { border-collapse: collapse; width: 100%; margin: 0.5rem 0; font-size: 0.9rem; }
+    .docs-content th, .docs-content td { border: 1px solid var(--border); padding: 0.4rem 0.6rem; text-align: left; }
+    .docs-content th { background: #f8fafc; font-weight: 600; }
+    .docs-content blockquote { margin: 0.5rem 0; padding-left: 1rem; border-left: 4px solid var(--accent); color: #475569; }
+    .docs-content img { max-width: 80%; height: auto; display: block; margin-left: auto; margin-right: auto; }
+    .docs-loading { color: #64748b; }
+    .docs-error { color: #b91c1c; }
+    .docs-nav .nav-sep { height: 0; padding: 0.35rem 0; margin: 0.2rem 0; border-bottom: 1px solid #cbd5e1; list-style: none; }
+    .docs-nav-group { margin: 0; list-style: none; }
+    .docs-nav-group-head { display: flex; align-items: center; gap: 0.25rem; }
+    .docs-nav-group-head a { flex: 1; }
+    .docs-nav-toggle { flex-shrink: 0; padding: 0.2rem 0.35rem; font-size: 0.7rem; line-height: 1; border: none; background: transparent; color: var(--accent); cursor: pointer; border-radius: 3px; }
+    .docs-nav-toggle:hover { background: #f1f5f9; }
+    .docs-nav-group.collapsed .docs-nav-sublist { display: none; }
+    .docs-nav-group.collapsed .docs-nav-toggle { transform: rotate(-90deg); }
+    .docs-nav-sublist { list-style: none; margin: 0.25rem 0 0.5rem 1em; padding: 0 0 0 0.75rem; border-left: 1px solid var(--border, #e2e8f0); }
+    .docs-nav-sublist a { font-size: 0.9rem; padding: 0.25rem 0.5rem 0.25rem 1em; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Music in Motion</h1>
+    <p class="tagline">A Real-Time Motion-Responsive Sound System to Enhance Physical Engagement</p>
+    <p class="subtitle">An Engineering Design Project by Ciana Tzuo · Horace Mann</p>
+    <nav class="page-nav">
+      <a href="index.html#big-question">Big Question</a>
+      <a href="page1.html">Design Constraints</a>
+      <a href="page2.html">Design Patterns</a>
+      <a href="page3.html">Sensor Fusion Pipeline</a>
+      <a href="page4.html">HW / SW Components</a>
+      <a href="page5.html">Key Learnings</a>
+      <a href="page6.html">References</a>
+      <span class="nav-sep">|</span>
+      <a href="docs.html">Docs</a>
+    </nav>
+  </header>
+
+  <div class="docs-layout">
+    <nav class="docs-nav" aria-label="Document list">
+      <ul>
+        <li><a href="docs.html#QUICK-START.md" data-doc="QUICK-START.md">START</a></li>
+        <li><a href="docs.html#MUSIC-MOTION.md" data-doc="MUSIC-MOTION.md">Music in Motion</a></li>
+        <li class="docs-nav-group collapsed" id="docs-nav-imu">
+          <div class="docs-nav-group-head">
+            <a href="docs.html#IMU-PIPELINE.md" data-doc="IMU-PIPELINE.md">IMU Pipeline</a>
+            <button type="button" class="docs-nav-toggle" aria-expanded="false" aria-label="Expand IMU Pipeline" title="Collapse/expand">▼</button>
+          </div>
+          <ul class="docs-nav-sublist">
+            <li><a href="docs.html#IMU-PIPELINE-A.md" data-doc="IMU-PIPELINE-A.md">Prototype A</a></li>
+            <li><a href="docs.html#IMU-PIPELINE-B.md" data-doc="IMU-PIPELINE-B.md">Prototype B</a></li>
+            <li><a href="docs.html#IMU-PIPELINE-C.md" data-doc="IMU-PIPELINE-C.md">Prototype C</a></li>
+            <li><a href="docs.html#IMU-PIPELINE-D.md" data-doc="IMU-PIPELINE-D.md">Prototype D</a></li>
+            <li><a href="docs.html#IMU-PIPELINE-E.md" data-doc="IMU-PIPELINE-E.md">Prototype E</a></li>
+            <li><a href="docs.html#IMU-PIPELINE-F.md" data-doc="IMU-PIPELINE-F.md">Prototype F</a></li>
+            <li><a href="docs.html#IMU-PIPELINE-G.md" data-doc="IMU-PIPELINE-G.md">Prototype G</a></li>
+          </ul>
+        </li>
+        <li class="docs-nav-group collapsed" id="docs-nav-vision">
+          <div class="docs-nav-group-head">
+            <a href="docs.html#MP-PIPELINE.md" data-doc="MP-PIPELINE.md">Vision Pipeline</a>
+            <button type="button" class="docs-nav-toggle" aria-expanded="false" aria-label="Expand Vision Pipeline" title="Collapse/expand">▼</button>
+          </div>
+          <ul class="docs-nav-sublist">
+            <li><a href="docs.html#MP-PIPELINE-A.md" data-doc="MP-PIPELINE-A.md">Prototype A</a></li>
+            <li><a href="docs.html#MP-PIPELINE-B.md" data-doc="MP-PIPELINE-B.md">Prototype B</a></li>
+            <li><a href="docs.html#MP-PIPELINE-C.md" data-doc="MP-PIPELINE-C.md">Prototype C</a></li>
+          </ul>
+        </li>
+        <li class="docs-nav-group collapsed" id="docs-nav-fusion">
+          <div class="docs-nav-group-head">
+            <a href="docs.html#SF-PIPELINE.md" data-doc="SF-PIPELINE.md">Fusion Pipeline</a>
+            <button type="button" class="docs-nav-toggle" aria-expanded="false" aria-label="Expand Fusion Pipeline" title="Collapse/expand">▼</button>
+          </div>
+          <ul class="docs-nav-sublist">
+            <li><a href="docs.html#SF-PIPELINE-A.md" data-doc="SF-PIPELINE-A.md">Prototype A</a></li>
+            <li><a href="docs.html#SF-PIPELINE-B.md" data-doc="SF-PIPELINE-B.md">Prototype B</a></li>
+            <li><a href="docs.html#SF-PIPELINE-C.md" data-doc="SF-PIPELINE-C.md">Prototype C</a></li>
+          </ul>
+        </li>
+        <li class="docs-nav-group collapsed" id="docs-nav-final">
+          <div class="docs-nav-group-head">
+            <a href="docs.html#MM-PIPELINE.md" data-doc="MM-PIPELINE.md">Final Pipeline</a>
+            <button type="button" class="docs-nav-toggle" aria-expanded="false" aria-label="Expand Final Pipeline" title="Collapse/expand">▼</button>
+          </div>
+          <ul class="docs-nav-sublist">
+            <li><a href="docs.html#MM-PIPELINE-A.md" data-doc="MM-PIPELINE-A.md">Prototype A</a></li>
+            <li><a href="docs.html#MM-PIPELINE-B.md" data-doc="MM-PIPELINE-B.md">Prototype B</a></li>
+            <li><a href="docs.html#MM-PIPELINE-C.md" data-doc="MM-PIPELINE-C.md">Prototype C</a></li>
+          </ul>
+        </li>
+        <li class="nav-sep" role="presentation"></li>
+        <li><a href="docs.html#IMU-VIEWER.md" data-doc="IMU-VIEWER.md">IMU Viewer</a></li>
+        <li><a href="docs.html#MM-APP-LAYOUT.md" data-doc="MM-APP-LAYOUT.md">MM UI Layout</a></li>
+        <li><a href="docs.html#INSTALL.md" data-doc="INSTALL.md">Installation</a></li>
+        <li><a href="icons.html">Icons</a></li>
+        <li class="nav-sep" role="presentation"></li>
+        <li><a href="../documentation/03. Research Paper.pdf" target="_blank" rel="noopener noreferrer">Research Paper (PDF)</a></li>
+      </ul>
+    </nav>
+    <main class="docs-content" id="doc-content" role="main">
+      <p class="docs-loading">Loading…</p>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    (function () {
+      var DOCS_PREFIX = '../documentation/';
+      var contentEl = document.getElementById('doc-content');
+      var navLinks = document.querySelectorAll('.docs-nav a[data-doc]');
+
+      function getDocFromHash() {
+        var hash = (location.hash || '').replace(/^#/, '');
+        if (hash && /\.md$/i.test(hash)) return hash;
+        return 'QUICK-START.md';
+      }
+
+      function mdFilename(href) {
+        if (!href || !/\.md$/i.test(href)) return null;
+        var parts = href.split(/\/|\\/);
+        return parts[parts.length - 1];
+      }
+
+      var navGroupConfig = [
+        { id: 'docs-nav-imu', test: /^IMU-PIPELINE(-[A-G])?\.md$/i, label: 'IMU Pipeline' },
+        { id: 'docs-nav-vision', test: /^MP-PIPELINE(-[A-C])?\.md$/i, label: 'Vision Pipeline' },
+        { id: 'docs-nav-fusion', test: /^SF-PIPELINE(-[A-C])?\.md$/i, label: 'Fusion Pipeline' },
+        { id: 'docs-nav-final', test: /^MM-PIPELINE(-[ABC])?\.md$/i, label: 'Final Pipeline' }
+      ];
+
+      function setActiveLink(doc) {
+        navLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('data-doc') === doc);
+        });
+        navGroupConfig.forEach(function (cfg) {
+          var group = document.getElementById(cfg.id);
+          if (!group) return;
+          var inGroup = cfg.test.test(doc);
+          var btn = group.querySelector('.docs-nav-toggle');
+          if (inGroup) {
+            group.classList.remove('collapsed');
+            if (btn) {
+              btn.setAttribute('aria-expanded', 'true');
+              btn.setAttribute('aria-label', 'Collapse ' + cfg.label);
+            }
+          } else {
+            group.classList.add('collapsed');
+            if (btn) {
+              btn.setAttribute('aria-expanded', 'false');
+              btn.setAttribute('aria-label', 'Expand ' + cfg.label);
+            }
+          }
+        });
+      }
+
+      function initNavGroupToggles() {
+        navGroupConfig.forEach(function (cfg) {
+          var group = document.getElementById(cfg.id);
+          var btn = group && group.querySelector('.docs-nav-toggle');
+          if (!btn) return;
+          btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var collapsed = group.classList.toggle('collapsed');
+            btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+            btn.setAttribute('aria-label', collapsed ? 'Expand ' + cfg.label : 'Collapse ' + cfg.label);
+          });
+        });
+      }
+
+      function rewriteMdLinks(container) {
+        container.querySelectorAll('a[href]').forEach(function (a) {
+          var filename = mdFilename(a.getAttribute('href'));
+          if (filename) {
+            a.setAttribute('href', '#' + filename);
+          }
+        });
+      }
+
+      function rewriteImgSrcs(container) {
+        container.querySelectorAll('img[src]').forEach(function (img) {
+          var src = img.getAttribute('src');
+          if (src && src.indexOf('http:') !== 0 && src.indexOf('https:') !== 0 && src.indexOf('/') !== 0) {
+            img.setAttribute('src', DOCS_PREFIX + src.replace(/^\.\//, ''));
+          }
+        });
+      }
+
+      function render(doc) {
+        var path = DOCS_PREFIX + doc;
+        contentEl.innerHTML = '<p class="docs-loading">Loading…</p>';
+        setActiveLink(doc);
+        fetch(path)
+          .then(function (r) {
+            if (!r.ok) throw new Error(r.statusText);
+            return r.text();
+          })
+          .then(function (md) {
+            contentEl.innerHTML = marked.parse(md);
+            rewriteMdLinks(contentEl);
+            rewriteImgSrcs(contentEl);
+          })
+          .catch(function (err) {
+            contentEl.innerHTML = '<p class="docs-error">Could not load ' + doc + ' from <code>documentation/</code>. ' + err.message + '. Serve from the project root (e.g. <code>python -m http.server 8080</code> in the musicmotion folder) so that <code>../documentation/</code> is available.</p>';
+          });
+      }
+
+      navLinks.forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          var doc = a.getAttribute('data-doc');
+          location.hash = doc;
+          render(doc);
+        });
+      });
+
+      window.addEventListener('hashchange', function () { render(getDocFromHash()); });
+      initNavGroupToggles();
+      render(getDocFromHash());
+    })();
+  </script>
+</body>
+</html>

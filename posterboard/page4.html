@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>HW / SW Components · Music in Motion</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .page4-layout { display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
+    .page4-text { flex: 1; min-width: 0; }
+    .page4-image { flex: 0 0 33%; max-width: 33%; box-sizing: border-box; }
+    .page4-image img { width: 100%; max-width: 100%; height: auto; display: block; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Music in Motion</h1>
+    <p class="tagline">A Real-Time Motion-Responsive Sound System to Enhance Physical Engagement</p>
+    <p class="subtitle">An Engineering Design Project by Ciana Tzuo · Horace Mann</p>
+    <nav class="page-nav">
+      <a href="index.html#big-question">Big Question</a>
+      <a href="page1.html">Design Constraints</a>
+      <a href="page2.html">Design Patterns</a>
+      <a href="page3.html">Sensor Fusion Pipeline</a>
+      <a href="page4.html">HW / SW Components</a>
+      <a href="page5.html">Key Learnings</a>
+      <a href="page6.html">References</a>
+      <span class="nav-sep">|</span>
+      <a href="docs.html">Docs</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-section">
+      <div class="page4-layout">
+        <div class="page4-text">
+          <h2><span class="section-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h.01"/><path d="M10 12h.01"/><path d="M14 12h.01"/><path d="M18 12h.01"/></svg></span> HW / SW Components</h2>
+          <h3>Hardware</h3>
+          <ul>
+            <li>MacBook Air with built-in camera</li>
+            <li>iPhone camera</li>
+            <li>Four WitMotion WT901WIFI IMU</li>
+            <li>Optional: external TV</li>
+          </ul>
+          <h3>Software</h3>
+          <ul>
+            <li>Code: Python 3 with OpenCV, NumPy, SciPy</li>
+            <li>Pose estimation: MediaPipe BlazePose</li>
+            <li>OpenCV: camera capture, frame synchronization, image processing</li>
+            <li>Audio: Sounddevice, librosa</li>
+            <li>Graphics / UI: PyQt5 and Matplotlib</li>
+          </ul>
+          <p class="page-note"><small>— 5 of 7 —</small></p>
+        </div>
+        <div class="page4-image">
+          <img src="images/components.png" alt="HW / SW components" />
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

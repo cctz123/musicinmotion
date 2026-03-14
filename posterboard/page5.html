@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Key Learnings · Music in Motion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Music in Motion</h1>
+    <p class="tagline">A Real-Time Motion-Responsive Sound System to Enhance Physical Engagement</p>
+    <p class="subtitle">An Engineering Design Project by Ciana Tzuo · Horace Mann</p>
+    <nav class="page-nav">
+      <a href="index.html#big-question">Big Question</a>
+      <a href="page1.html">Design Constraints</a>
+      <a href="page2.html">Design Patterns</a>
+      <a href="page3.html">Sensor Fusion Pipeline</a>
+      <a href="page4.html">HW / SW Components</a>
+      <a href="page5.html">Key Learnings</a>
+      <a href="page6.html">References</a>
+      <span class="nav-sep">|</span>
+      <a href="docs.html">Docs</a>
+    </nav>
+  </header>
+  <main>
+    <section class="page-section">
+      <h2><span class="section-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15.5 7.5 2.3 2.3a1 1 0 0 0 1.4 0l2.1-2.1a1 1 0 0 0 0-1.4L19 4"/><path d="m21 2-9.6 9.6"/><path d="M7.5 15.5 4.7 17.8a1 1 0 0 1-1.4 0L1.2 15.7a1 1 0 0 1 0-1.4L5 11"/></svg></span> Key Learnings</h2>
+      <h3>IMU-Only Designs</h3>
+      <ul>
+        <li>Sensors: Roll, Pitch, Yaw, X/Y/Z-Accel; large vs precise movements</li>
+        <li>Control: Pitch, Timbre, Volume, Equalizer</li>
+        <li>Achieved: Sensor → Audio pipeline</li>
+        <li>Issues: Not immersive; better suited for hand motions, not full body</li>
+      </ul>
+      <h3>Vision-Only Designs</h3>
+      <ul>
+        <li>L/R arm height, elbow bend</li>
+        <li>Control: Timbre, Volume, Equalizer</li>
+        <li>Achieved: Full-body movement → Audio pipeline</li>
+      </ul>
+      <figure><img width=500 src="../documentation/images/mp-pipeline-C.png" alt="Screenshot of Body Equalizer" /></figure>
+      <h3>Multi-Modal Sensor</h3>
+      <figure><img width=500 src="../documentation/images/sf-pipeline-C.png" alt="Screenshot of Body Equalizer" /></figure>
+      <ul>
+        <li>Sensors: Roll, Pitch, Yaw, X/Y/Z-Accel; large vs precise movements</li>
+        <li>Control: Pitch, Timbre, Volume, Equalizer</li>
+        <li>Achieved: Sensor → Audio pipeline</li>
+      </ul>
+      <h3>Final Optimized Design</h3>
+      <figure><img width="500" src="../documentation/images/mm-pipeline-C.png" alt="Screenshot of Music in Motion App" /></figure>
+      <ul>
+        <li>Air DJ</li>
+        <li>Calm vs Intense</li>
+        <li>Two Handed Instrument</li>
+      </ul>
+      <p><strong>Key takeaways:</strong></p>
+      <ul>
+        <li>Frequency of input (xx Hz)</li>
+        <li>Focus on timbre, not pitch</li>
+      </ul>
+      <p class="page-note"><small>— 6 of 7 —</small></p>
+    </section>
+  </main>
+</body>
+</html>
