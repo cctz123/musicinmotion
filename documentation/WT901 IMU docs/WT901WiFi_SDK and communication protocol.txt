@@ -1,0 +1,2 @@
+WT901WiFi communication protocol: https://drive.google.com/file/d/1b_MMSaEH-HZtBWI3AdXZHycX-RWfQ-Sl/view?usp=drive_link
+WT901WiFi_SDK download link: https://github.com/WITMOTION/WitWIFI_WT901WIFI
