@@ -1,0 +1,21 @@
+{
+  "_note": "USB/Serial baud rate is hardcoded to 9600 and ignoredd by the WT901WIFI device",
+  "mode": "sta",
+  "usb": {
+    "port": "/dev/tty.usbserial-110",
+    "baud": 9600
+  },
+  "wifi": {
+    "ssid": "iPhone",
+    "password": "yourname22",
+    "port": 1399,
+    "port2": 1398,
+    "ip": "172.20.10.9",
+    "use_tcp": false
+  },
+  "ap": {
+    "ssid": "WT5500008010",
+    "ip": "192.168.4.1",
+    "port": 1399
+  }
+}
